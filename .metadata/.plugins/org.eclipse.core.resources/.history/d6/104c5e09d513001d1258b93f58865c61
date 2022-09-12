@@ -1,0 +1,19 @@
+package Module3;
+import java.util.*;
+public class dibya {
+	public static void main(String args[]) {
+		int a,b;
+		String s= new String();
+		String t= new String();
+		Scanner sc = new Scanner(System.in);
+		s=sc.nextLine();
+		a=sc.nextInt();
+		b=sc.nextInt();
+		t=s.substring(0,a);
+		s=t+s.substring(a,s.length());
+		t=s.substring(s.length()-b-1,s.length());
+		s=t+s.substring(0,b);
+		System.out.println(s);
+	
+	}
+}

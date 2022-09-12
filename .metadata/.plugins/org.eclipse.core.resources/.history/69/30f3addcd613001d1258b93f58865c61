@@ -1,0 +1,23 @@
+package Module3;
+import java.util.*;
+public class dibya {
+	public static void main(String args[]) {
+		int a,b;
+		char[] d;
+ 		String s= new String();
+		String t= new String();
+		Scanner sc = new Scanner(System.in);
+		s=sc.nextLine();
+		d=s.toCharArray();
+		a=sc.nextInt();
+		b=sc.nextInt();
+		/*t=s.substring(0,a);
+		s=s.substring(a,s.length())+t;
+		/*t=s.substring(s.length()-b-1,s.length());
+		s=t+s.substring(0,s.length()-b-1);*/
+		for(int i=0;i<s.length();i++) d[i]=d[(i+a)%s.length()];
+		for(int i=0;i<s.length();i++) d[i]=d[(i-b)%s.length()];
+		System.out.println(s);
+	
+	}
+}

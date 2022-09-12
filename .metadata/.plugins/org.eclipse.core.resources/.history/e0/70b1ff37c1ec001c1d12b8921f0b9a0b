@@ -1,0 +1,36 @@
+package passwordGen;
+import java.util.*;
+
+public class UserConsole  {
+	public static void main(String[] args) {
+		
+		int a,k;
+		String Pass;
+		Passwordtool t;
+		Scanner s1= new Scanner(System.in);
+		Scanner s2= new Scanner(System.in);
+		do{
+			t= new Passwordtool();
+			System.out.println("Enter Choice");
+			System.out.println("1: Generate Password");
+			System.out.println("2: Check Password Strength(BRUTE FORCE)");
+			System.out.println("0: Exit");
+			a= s1.nextInt();
+			switch(a) {
+				case 1: System.out.println("Enter size of password to be generated");
+				k=s2.nextInt();
+				t.SelectFlag(true,true,true,true);
+				System.out.println("The Generated password is "+ t.generatePassword(k));
+				break;
+				case 2:
+				System.out.println("Enter password");
+				Pass=s2.nextLine();
+				System.out.println("Now thread will run until a password match is found till 10 letters");
+				new PasswordCrack(Pass);
+				break;
+			}
+			
+		}
+		while(a!=0);
+	}
+}

@@ -1,0 +1,32 @@
+package Module3;
+import java.util.*;
+//import java.util.
+public class dibya {
+	public static void main(String args[]) {
+		int a,b,count=0;
+		char[] d;
+ 		String s= new String();
+		String t= new String();
+		String r= new String();
+		
+		Scanner sc = new Scanner(System.in);
+		s=sc.nextLine();
+		r=s;
+		//d=s.toCharArray();
+		a=sc.nextInt();
+		b=sc.nextInt();
+		do{
+		if(a!=0) {
+			System.out.println(t=s.substring(s.length()-a,s.length()));
+		System.out.println(s=t+s.substring(0,s.length()-a));
+		}
+		if(b!=0) {
+			System.out.println(t=s.substring(s.length()-b,s.length()));
+		System.out.println(s=t+s.substring(0,s.length()-b));
+		}count++;
+		System.out.println(r);
+		}while(s.equals(r));
+		System.out.println(count);
+	
+	}
+}
